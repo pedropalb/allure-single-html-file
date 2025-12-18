@@ -199,7 +199,7 @@ def combine_allure(folder, dest_folder=None, remove_temp_files=False, auto_creat
                 f.write(f""" "{url}": "{content}", \n""")
             else:
                 content = d['content'].replace("\\", "\\\\").replace('"', '\\"')\
-                    .replace("\n", "\\n").replace("<", "&lt;").replace(">", "&gt;")
+                    .replace("\n", "\\n")
 
                 f.write(f""" "{url}": "{content}", \n""")
         f.write("};\n")
